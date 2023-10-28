@@ -18,25 +18,32 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar">
-        <h3 class="navbar__logo">Johnathan Speeter</h3>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Articles</a>
+      <header class="header">
+        <h3 class="header__logo">Johnathan Specter</h3>
+        <ul class="header__menu">
+          <li class="header__item">
+            <a class="header__link" href="#">Articles</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Chats</a>
+          <li class="header__item">
+            <a class="header__link" href="#">Chats</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Awards</a>
+          <li class="header__item">
+            <a class="header__link" href="#">Awards</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">About</a>
+          <li class="header__item">
+            <a class="header__link" href="#">About</a>
           </li>
         </ul>
         <button class="btn">Get in touch</button>
-      </nav>
-      <section class="hero">
+        <img
+          class="header__hamburger"
+          src="imgs/hamburger.svg"
+          alt="hamburger menu"
+        />
+      </header>
+    </div>
+    <section class="hero">
+      <div class="container">
         <div class="hero-box">
           <h1 class="hero__title">
             Helping companies build better, scalable software.
@@ -88,7 +95,82 @@
             </p>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+    <section class="bio">
+      <div class="container">
+        <div class="bio-grid">
+          <h2 class="bio-grid__title">
+            A co-founder at one of the world's largest communities.
+          </h2>
+          <p class="bio-grid__description">
+            The combined experience I have working at the top Fortune 500
+            companies has allowed me to developer a skillset that helps me in
+            not just development, but in every aspect of any bussiness.
+          </p>
+          <p class="bio-grid__description">
+            I'm proud to announce that I am now working at one of the world's
+            largest communities teaching young minds about how to sell yourself
+            as developer and open them to a whole new world of opportunities.
+          </p>
+          <p class="bio-grid__description">
+            As a developer, you have everything available to you and all that's
+            holding you back is yourself.<br /><br />
+            A quote I live perfectly illustrates what i mean.
+          </p>
+          <p class="bio-grid__description">
+            "How big would you dream, if you knew you wouldn't fail?" You've
+            already gone through the hardest parts being a developer, it's time
+            to elevate your skills and become a leader in something you're
+            passionate about.
+          </p>
+
+          <p class="bio-grid__description">
+            I'm happy to chat over coffee some time about how i can help your
+            company.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="cta__title">Interested in working with me?</h2>
+          <p class="cta__description">
+            I'm active on all social media platforms listed below, but you can
+            also send me an email and i will get back to you within 24-48 hours.
+          </p>
+          <button class="btn">Get in touch</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <h3 class="footer__logo">Johnathan Specter</h3>
+          <div class="social-icons">
+            <a href="#" class="social-link"
+              ><img
+                class="social-icon"
+                src="imgs/social_icons/github.svg"
+                alt="Github icon"
+            /></a>
+            <a href="#" class="social-link"
+              ><img
+                class="social-icon"
+                src="imgs/social_icons/linkedin.svg"
+                alt="Linkedin icon"
+            /></a>
+            <a href="#" class="social-link"
+              ><img
+                class="social-icon"
+                src="imgs/social_icons/twitter.svg"
+                alt="Twitter icon"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

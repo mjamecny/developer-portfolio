@@ -11,8 +11,9 @@ html {
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.5;
   background-color: #0a0a0b;
+  overflow-x: hidden;
 }
 
 h1,
@@ -24,32 +25,44 @@ h6 {
   font-family: "Prata", serif;
 }
 
+p {
+  color: #898989;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
 .container {
   max-width: 120rem;
-  height: 70rem;
   margin: 0 auto;
 }
 
-.navbar {
-  margin-top: 4.8rem;
+.header {
+  padding-top: 4.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #0a0a0b;
+  position: relative;
 }
 
-.navbar__logo {
+.header__logo {
   font-size: 2rem;
+  font-weight: 400;
   color: #d9d9d9;
 }
 
-.navbar__menu {
+.header__hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.header__menu {
   display: flex;
   list-style: none;
   gap: 2.4rem;
 }
 
-.navbar__link {
+.header__link {
   font-size: 2rem;
   text-decoration: none;
   color: #898989;
@@ -65,7 +78,9 @@ h6 {
 }
 
 .hero {
-  margin-top: 4.8rem;
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
+  background-color: #0a0a0b;
 }
 
 .hero-box {
@@ -80,9 +95,6 @@ h6 {
 }
 
 .hero__description {
-  color: #898989;
-  font-size: 2rem;
-  line-height: 1.4;
   margin-top: 2.4rem;
 }
 
@@ -111,6 +123,199 @@ h6 {
 
 .portfolio-grid__description {
   margin-top: 1.6rem;
+}
+
+.bio {
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+  background-color: #2e3038;
+}
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: column;
+  column-gap: 8rem;
+  row-gap: 1.6rem;
+}
+
+.bio-grid__title {
+  color: #ffffff;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.cta {
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.cta-box {
+  width: 48%;
+}
+
+.cta__title {
+  color: #ffffff;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.cta__description {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.footer {
+  background-color: #2e3038;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2rem 0;
+}
+
+.footer__logo {
   font-size: 2rem;
-  color: #898989;
+  color: #d9d9d9;
+  font-weight: 400;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2.4rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-inline: 3.2rem;
+  }
+
+  .header__hamburger {
+    display: inline-block;
+    z-index: 1000;
+  }
+
+  .header button {
+    display: none;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .hero-box {
+    width: 100%;
+  }
+
+  .logos {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 6.4rem;
+  }
+
+  .portfolio-grid__img {
+    width: 100%;
+  }
+
+  .bio {
+    padding: 6.4rem 3.2rem;
+  }
+
+  .bio-grid {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+
+  .cta {
+    padding: 0 3.2rem;
+  }
+
+  .cta-box {
+    width: 80%;
+  }
+
+  .footer {
+    padding: 0 3.2rem;
+  }
+
+  .header__menu {
+    background-color: rgba(10, 10, 11, 0.604);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    transform: translateX(100%);
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .header__menu {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .header__link {
+    font-size: 3.6rem;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__title {
+    font-size: 3.6rem;
+  }
+
+  .hero {
+    padding: 0 2.4rem;
+  }
+
+  .logos {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4.8rem;
+  }
+
+  .cta {
+    padding: 0 2.4rem;
+  }
+
+  .cta-box {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 0 2.4rem;
+  }
+
+  .social-icons {
+    gap: 1.6rem;
+  }
 }
